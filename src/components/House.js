@@ -111,8 +111,9 @@ function House(props){
         .once('confirmation',((confirmation)=>{
             trade.methods.listHome(id, etherAmount).send({from:account})
             .once('confirmation',(confirmation)=>{
-                setMessage("Home successfully listed for sell");
+                window.alert("Home successfully listed for sell");
                 setLoading(false);
+                window.location.reload();
             })
             .on('error',(error)=>{
                 setMessage("something went wrong. please try again.");
@@ -131,7 +132,8 @@ function House(props){
         trade.methods.buyHome(id).send({value:etherAmount , from:account})
         .once('confirmation', (confirmation) => {
           setLoading(false);
-          setMessage("transaction successful.");
+          window.alert("transaction successful.");
+          window.location.reload();
         })
         .on('error', (error) => {
             setMessage("Transaction failed. Try again!");

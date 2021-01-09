@@ -1,14 +1,14 @@
 {
-  "main.js": "/homechain/static/js/main.f0caf0b7.chunk.js",
-  "main.js.map": "/homechain/static/js/main.f0caf0b7.chunk.js.map",
+  "main.js": "/homechain/static/js/main.605fce90.chunk.js",
+  "main.js.map": "/homechain/static/js/main.605fce90.chunk.js.map",
   "static/css/1.90e0cbd8.chunk.css": "/homechain/static/css/1.90e0cbd8.chunk.css",
-  "static/js/1.4ca40c33.chunk.js": "/homechain/static/js/1.4ca40c33.chunk.js",
-  "static/js/1.4ca40c33.chunk.js.map": "/homechain/static/js/1.4ca40c33.chunk.js.map",
+  "static/js/1.c7259df9.chunk.js": "/homechain/static/js/1.c7259df9.chunk.js",
+  "static/js/1.c7259df9.chunk.js.map": "/homechain/static/js/1.c7259df9.chunk.js.map",
   "runtime~main.js": "/homechain/static/js/runtime~main.716704b6.js",
   "runtime~main.js.map": "/homechain/static/js/runtime~main.716704b6.js.map",
   "static/media/semantic.min.css": "/homechain/static/media/brand-icons.a1a749e8.svg",
   "static/css/1.90e0cbd8.chunk.css.map": "/homechain/static/css/1.90e0cbd8.chunk.css.map",
   "index.html": "/homechain/index.html",
-  "precache-manifest.4bc16756a1482b45228c3f7cf6b889d9.js": "/homechain/precache-manifest.4bc16756a1482b45228c3f7cf6b889d9.js",
+  "precache-manifest.e77b453e844eb999657f599d07cbe4e6.js": "/homechain/precache-manifest.e77b453e844eb999657f599d07cbe4e6.js",
   "service-worker.js": "/homechain/service-worker.js"
 }
