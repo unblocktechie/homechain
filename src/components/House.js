@@ -31,14 +31,15 @@ function House(props){
           window.web3 = new Web3(window.web3.currentProvider)
         }
         else {
-          window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!');
+          setMessage('Non-Ethereum browser detected. You should consider trying MetaMask!');
         }
     }
   
 
     async function loadBlockchainData(){
         const web3 = window.web3;
-       
+  
+        if(typeof (web3) != 'undefined' && web3 != null){ 
             web3.eth.getAccounts()
             .then(res=>{
                 setAccount(res[0]);
@@ -46,9 +47,10 @@ function House(props){
             .catch(err=>{
                 setMessage("please select your ethereum account");
             })  
-          
-        const networkId = await web3.eth.net.getId();
         
+
+        const networkId = await web3.eth.net.getId();
+         
         const homeData = Home.networks[networkId];
             if(homeData) {
                 const hdc = new web3.eth.Contract(Home.abi, homeData.address);
@@ -83,7 +85,8 @@ function House(props){
                 setSell({forSell:ifs.forSell, price:amount});
             } else {
               setMessage('Trade contract not deployed to detected network. Please select Ropsten Test Network.');
-            }       
+            }  
+          }     
     } 
       
         useEffect(() => {
