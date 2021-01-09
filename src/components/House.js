@@ -20,6 +20,7 @@ function House(props){
     let [house, setHouse] = useState({});
     let [owner, setOwner] = useState("");
     const [sell, setSell] = useState({});
+    const [data,setData] = useState(false);
 
     async function loadWeb3() {
         if (window.ethereum) {
@@ -63,12 +64,12 @@ function House(props){
                         floors:hd.numberOfFloors.toString(),
                         rooms:hd.numberOfRooms.toString()
                     }); 
-
+                setData(true);
                 const onr = await hdc.methods.ownerOf(id).call();
                 setOwner(onr);
 
             } else {
-              setMessage('Home contract not deployed to detected network. Please select Ropsten Test Network.');
+              setMessage('Home contract not deployed to detected network. Please select Ropsten Test Network. ');
             }
         
             const tradeData = Trade.networks[networkId];
@@ -154,13 +155,15 @@ function House(props){
             <Header>loading...please wait...It may take 5-10 minutes...</Header>
             :<Header>{message}</Header>
             }
+            {(data)&&(<>  
             <p><b>Registration Number : </b> {house.regNo} </p>
             <p><b>Owner : </b> {owner} </p>
             <p><b>Address : </b> {house.addr} </p>
             <p><b>Area : </b> {house.area} square yard </p>
             <p><b>Year : </b> {house.year} </p>
             <p><b>Number of floors : </b> {house.floors} </p>
-            <p><b>Number of rooms : </b> {house.rooms} </p>
+            <p><b>Number of rooms : </b> {house.rooms} </p></>)
+            }
             {sell.forSell&&<p><b>Price : </b> {sell.price} ETH </p>}
           </Modal.Description>
         </Modal.Content>
