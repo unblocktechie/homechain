@@ -1,0 +1,99 @@
+body {
+  color: #40514E;
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+.title-text h1 {
+  color: #653614;
+  font-size: 5.625rem;
+  margin: 50px auto 0 auto;
+  font-family: 'Sacramento', cursive;
+}
+
+.title-text h2 {
+  color: #415A6B;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+p {
+  line-height: 2;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+a{
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #EAF6F6;
+}
+
+.top-container {
+  background-color: #6DC6FF;
+  position: relative;
+  padding-top: 100px;
+}
+
+.bottom-container {
+  background-color: #653614;
+  padding: 10px 0 10px;
+  margin-top: -2px;
+}
+
+.copyright {
+  color: aqua;
+  font-size: 1.5 rem;
+  padding: 20px 0;
+}
+
+.top-cloud {
+  position: absolute;
+  right: 300px;
+  top: 40px;
+}
+
+.bottom-cloud {
+  display: none;
+}
+
+.home-image{
+  margin-top: 40%;
+}
+
+@media only screen and (min-width: 600px) {
+  .home-image {
+    margin-top: 30%;
+  }
+
+  .bottom-cloud {
+    display: block;
+    position: absolute;
+    left: 250px;
+    top: 350px;
+  }
+
+}
+
+.mountain{
+  display: inline;
+  margin: 0% 2%;
+}
+
+.mountain:hover{
+  transform: scale(1.2); 
+}
+
+.line {
+  margin: -5px;
+}
+
+
